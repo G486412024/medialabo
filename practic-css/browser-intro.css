@@ -1,24 +1,37 @@
 p {
 	color: navy;
-}
-
-p.info {
 	font-size: 10pt;
 }
 
-h1 {
-	background-color: #7f7fcf;
+p.info {
+	font-size: small;
+	background-color:#dfdfdf;
 }
 
+h1 {
+
+	color:white;
+	text-shadow:navy 1px 0 10px;
+}
+img.Firefox{
+	float:right;
+}
 h2 {
-	border: solid 1px black;
+	
 	margin: 5px;
+	font-family: cursive;
+	color:#3f3faf;
+	background:linear-gradient(0.1turn, white, #ffefaf );
 }
 
 div#zentai {
-	display: flex;
-	flex-direction: row;
-	width: 1024px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows:200px 200px;
+	grid-gap:10px;
+	padding:5px;
+
+	width:1024px;
 }
 
 div#zentai > div {
