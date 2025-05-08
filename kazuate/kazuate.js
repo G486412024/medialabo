@@ -34,22 +34,18 @@ function hantei() {
         }else {
             console.log("答えは"+kotae+"でした．すでにゲームは終わっています");
             kaisu++;
-      
         }
       
-    }else if(yoso<kotae){
+    }else if(yoso<kotae && kaisu<=3){
       console.log("まちがい、答えはもっと大きいですよ");
 
       kaisu++;
-    }else if(yoso>kotae){
+    }else if(yoso>kotae && kaisu<=3){
       console.log("まちがい、答えはもっと小さいですよ");
-      kaisu++
-    }else if(i>=4){
-      console.log("答えはでした.ゲームはすでに終わっています");
-      kaisu++
-    }else if(kaisu>4){
-        console.log("答えは"+kotae+"でした．すでにゲームは終わっています");
-        kaisu++;
+      kaisu++;
+    }else if(kaisu>3){
+      console.log("答え"+kotae+"はでした.ゲームはすでに終わっています");
+      kaisu++;
     }
   }
 }
