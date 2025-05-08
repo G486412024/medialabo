@@ -24,3 +24,6 @@ h2:before {
     top: 0.55em;/*アイコンの位置*/
     color: #7db4e6; /*アイコン色*/
   }
+  body{
+    background: linear-gradient(0.5turn, #dcf0f2, #e1f1f8,#e1e7f8, #b1bfdf,#7b98d7)
+  }
