@@ -1,14 +1,19 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-  console.log(campus.address);
-  for(let r of campus.buildingD){
-    console.log(r);
+  console.log(data.results.shop[0].access);
+  console.log(data.results.shop[0].address);
+  console.log(data.results.shop[0].band);
+  console.log(data.results.shop[0].barrier_free);
+  console.log(data.results.shop[0].budget);
+  
+    console.log(data.results.shop[0].budget.average);
+    console.log(data.results.shop[0].budget.code);
+    console.log(data.results.shop[0].budget.name);
+  
+ 
   }
-  for(let n of gakka){
-    console.log(n.name);
-  }
-}
+
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
