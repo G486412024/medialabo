@@ -12,8 +12,8 @@ let m=Number(right);
 let goukei=n + m;
 
 
-p=document.querySelector('p#answer');
-     p.textContent= goukei ;
+ span=document.querySelector('span#answer');
+     span.textContent= goukei ;
 }
 
 b=document.querySelector('button#calc'); 
