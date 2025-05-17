@@ -1,6 +1,9 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
+
+
+  
   console.log(data.results.shop[0].access);
   console.log(data.results.shop[0].address);
   console.log(data.results.shop[0].band);
@@ -13,8 +16,12 @@ function print(data) {
   
  
   }
-
-
+  
+let a=document.querySelector('button#calc');
+   a.addEventListener('click',project);
+  function project(){
+      
+  }
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
