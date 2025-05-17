@@ -16,12 +16,21 @@ function print(data) {
   
  
   }
-  
-let a=document.querySelector('button#calc');
-   a.addEventListener('click',project);
-  function project(){
-      
+  b=document.querySelector('button#calc');
+  b.addEventListener('click',greeting); 
+function greeting(){
+    let i = document.querySelector('input[name="ran"]');
+    ran=i.value;
+    i.getAttribute('name');
+    let kaitou='2件がヒットしました';
+    p=document.querySelector('p#hit');
+     p.textContent= kaitou ;
+     console.log('検索キー:'+ran);
   }
+  
+
+
+
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
 
