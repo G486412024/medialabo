@@ -3,45 +3,121 @@
 function print(data) {
 
 
-  
+
   console.log(data.results.shop[0].access);
   console.log(data.results.shop[0].address);
   console.log(data.results.shop[0].band);
   console.log(data.results.shop[0].barrier_free);
   console.log(data.results.shop[0].budget);
-  
-    console.log(data.results.shop[0].budget.average);
-    console.log(data.results.shop[0].budget.code);
-    console.log(data.results.shop[0].budget.name);
-  
- 
-  }
-  b=document.querySelector('button#calc');
-  b.addEventListener('click',greeting); 
-function greeting(){
-    let i = document.querySelector('input[name="ran"]');
-    ran=i.value;
-    i.getAttribute('name');
-    let kaitou='2件がヒットしました';
-    p=document.querySelector('p#hit');
-     p.textContent= kaitou ;
-     console.log('検索キー:'+ran);
-  }
-  
+
+  console.log(data.results.shop[0].budget.average);
+  console.log(data.results.shop[0].budget.code);
+  console.log(data.results.shop[0].budget.name);
+
+  console.log(data.results.shop[1].access);
+  console.log(data.results.shop[1].address);
+  console.log(data.results.shop[1].band);
+  console.log(data.results.shop[1].barrier_free);
+  console.log(data.results.shop[1].budget);
+
+  console.log(data.results.shop[1].budget.average);
+  console.log(data.results.shop[1].budget.code);
+  console.log(data.results.shop[1].budget.name);
+
+}
+
+
+b = document.querySelector('button#calc');
+b.addEventListener('click', greeting);
+function greeting() {
+  let i = document.querySelector('input[name="ran"]');
+  ran = i.value;
+  i.getAttribute('name');
+  let kaitou = '2件がヒットしました';
+  p = document.querySelector('p#hit');
+  p.textContent = kaitou;
+  console.log('検索キー:' + ran);
+}
+
 
 
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-console.log(data.results.shop[0].access);
-  console.log(data.results.shop[0].address);
-  console.log(data.results.shop[0].band);
-  console.log(data.results.shop[0].barrier_free);
-  console.log(data.results.shop[0].budget);
+  let t = document.createElement('t');
+  t.setAttribute('div', 'result');
+
+  let u = document.createElement('ul');
+  t.insertAdjacentElement('beforeend', u);
+  let l = document.createElement('p');
   
-    console.log(data.results.shop[0].budget.average);
-    console.log(data.results.shop[0].budget.code);
-    console.log(data.results.shop[0].budget.name);
+  l.textContent = '<検索結果1件目>';
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[0].access;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[0].address;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[0].band;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[0].barrier_free;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[0].budget.average;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[0].budget.code;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[0].budget.name;
+  u.insertAdjacentElement('beforeend', l);
+
+  
+
+  l = document.createElement('p');
+  l.textContent = '<検索結果2件目>';
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[1].access;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[1].address;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[1].band;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[1].barrier_free;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[1].budget.average;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[1].budget.code;
+  u.insertAdjacentElement('beforeend', l);
+
+  l = document.createElement('li');
+  l.textContent = data.results.shop[1].budget.name;
+  u.insertAdjacentElement('beforeend', l);
+
+  p = document.querySelector('span#answer');
+  p.insertAdjacentElement('afterend', u);
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
@@ -61,12 +137,12 @@ function showResult(resp) {
 
 // 課題6-1: 通信エラーが発生した時の処理
 function showError(err) {
-    console.log(err);
+  console.log(err);
 }
 
 // 課題6-1: 通信の最後にいつも実行する処理
 function finish() {
-    console.log('Ajax 通信が終わりました');
+  console.log('Ajax 通信が終わりました');
 }
 
 ////////////////////////////////////////

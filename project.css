@@ -1,29 +1,12 @@
-h1{
-    padding: 0.25em 0.5em;
+h1 {
+  padding: 0.25em 0.5em;
   color: #494949;
   background: #f8f8ff;
   border-bottom: solid 3px #d7d7d7;
   border-left: solid 5px #7db4e6;
 }
-h2{
-    position: relative;
-  padding: 0.5em 0.5em 0.5em 1.5em;
-  line-height: 1.4;
-  color: #696969;
-  border-top: dotted 1px gray;
-  border-bottom: dotted 1px gray;
-  background: #f8f8ff;
+
+body {
+ 
+  background-color: rgb(203, 217, 239);
 }
-h2:before {
-    font-family: "Font Awesome 5 Free";/*忘れずに*/
-    content: "\f138";/*アイコンのユニコード*/
-    font-weight: 900;
-    position: absolute;/*絶対位置*/
-    font-size: 1em;/*サイズ*/
-    left: 0.25em;/*アイコンの位置*/
-    top: 0.55em;/*アイコンの位置*/
-    color: #7db4e6; /*アイコン色*/
-  }
-  body{
-    background: linear-gradient(0.5turn, #dcf0f2, #e1f1f8,#e1e7f8, #b1bfdf,#7b98d7)
-  }
