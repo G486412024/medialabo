@@ -27,7 +27,7 @@ function print(data) {
 }
 
 
-b = document.querySelector('button#calc');
+b = document.querySelector('button#genre');
 b.addEventListener('click', greeting);
 function greeting() {
   let i = document.querySelector('input[name="ran"]');
@@ -39,18 +39,28 @@ function greeting() {
   console.log('検索キー:' + ran);
 }
 
-
-
-
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-  let t = document.createElement('t');
-  t.setAttribute('div', 'result');
 
+  let v = document.createElement('span');
+  let y = document.querySelector('p#hit');;
+  y.insertAdjacentElement('beforeend', v);
+
+  
+  if (v != null) {
+    v.remove();
+  }
+
+  v = document.createElement('span');
+  y = document.querySelector('p#hit');;
+  y.insertAdjacentElement('beforeend', v);
+let t = document.createElement('div');
+
+  v.insertAdjacentElement('beforeend', t);
   let u = document.createElement('ul');
   t.insertAdjacentElement('beforeend', u);
   let l = document.createElement('p');
-  
+
   l.textContent = '<検索結果1件目>';
   u.insertAdjacentElement('beforeend', l);
 
@@ -82,7 +92,7 @@ function printDom(data) {
   l.textContent = data.results.shop[0].budget.name;
   u.insertAdjacentElement('beforeend', l);
 
-  
+
 
   l = document.createElement('p');
   l.textContent = '<検索結果2件目>';
@@ -116,22 +126,37 @@ function printDom(data) {
   l.textContent = data.results.shop[1].budget.name;
   u.insertAdjacentElement('beforeend', l);
 
-  p = document.querySelector('span#answer');
+  p = document.querySelector('span');
   p.insertAdjacentElement('afterend', u);
+
+
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
-
+let d = document.querySelector('button#genre');
+d.addEventListener('click', sendRequest);
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
 
+  // 通信開始
+  axios.get(url)
+    .then(showResult)   // 通信成功
+    .catch(showError)   // 通信失敗
+    .then(finish);      // 通信の最後の処理
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
 function showResult(resp) {
+  let data = resp.data;
+
+  if (typeof data === 'string') {
+    data = JSON.parse(data);
+  }
+  printDom(data);
 
 }
 
