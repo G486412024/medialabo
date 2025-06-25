@@ -1,12 +1,85 @@
-h1 {
-  padding: 0.25em 0.5em;
-  color: #494949;
-  background: #f8f8ff;
-  border-bottom: solid 3px #d7d7d7;
-  border-left: solid 5px #7db4e6;
+body {
+  font-family: Arial, sans-serif;
+  background: #dde5f1;
+  color: #222;
+  margin: 20px;
+  padding: 0 15px;
 }
 
-body {
- 
-  background-color: rgb(217, 228, 245);
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+label {
+  font-weight: bold;
+  color: #444;
+}
+
+input#ran {
+  padding: 6px 10px;
+  border: 1.5px solid #888;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 160px;
+  margin-right: 8px;
+}
+
+input#ran:focus {
+  border-color: #555;
+  outline: none;
+}
+
+button#genre {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+button#genre:hover {
+  background-color: #333;
+}
+
+p#hit {
+  text-align: center;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+ul {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  list-style-type: none;
+  color: #555;
+  font-size: 1rem;
+}
+
+ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul > p {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 12px;
 }
