@@ -6,22 +6,24 @@ console.log ('答え（デバッグ用）: ' + kotae);
 let kaisu = 0;
 
 
+
 // ボタンを押したら hantei() を呼び出すイベント処理をする
    let a=document.querySelector('button#calc');
    a.addEventListener('click',hantei);  
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
- 
+
+  
+
   kaisu++;
 
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   let yoso = document.querySelector('input[name="seisu"]');
-  yoso.getAttribute('name');
-  seisu=yoso.value;
-  let n=Number(seisu);
+  let seisu = yoso.value;
+  let n = Number(seisu);
 
-  k=document.querySelector('span#kaisu');
+  let k=document.querySelector('span#kaisu');
   
  
   // 課題3-1: 正解判定する
@@ -38,7 +40,7 @@ function hantei() {
       p.textContent= ('正解です、おめでとう！');
       k=k+4;
         }else {
-            p.textContent= ('答えは'+k+'でした．すでにゲームは終わっています');
+            p.textContent= ('答えは'+kotae+'でした．すでにゲームは終わっています');
            
         }
       
