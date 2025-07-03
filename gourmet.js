@@ -160,7 +160,7 @@ function sendRequest() {
     code = 'G017';
   } else {
     let p = document.querySelector('p#hit');
-  p.textContent = '対応する結果がありません';
+  p.textContent = '対応する結果が見つかりませんでした。';
   return;
   }
 
